@@ -1,0 +1,25 @@
+package: tiny-segmenter
+version: 1.1.0
+
+sources:
+  include:
+    - site-lisp/tiny-segmenter/**/*.l
+  exclude:
+    - site-lisp/tiny-segmenter/**/tests/*.l
+    - site-lisp/tiny-segmenter/**/examples/*.l
+
+document:
+  - site-lisp/tiny-segmenter/docs/README.rd
+
+files:
+  include:
+    - site-lisp/**/*.l
+    - site-lisp/**/*.lc
+    - site-lisp/tiny-segmenter/lib/*.dll
+    - site-lisp/tiny-segmenter/examples/**/*.*
+    - site-lisp/tiny-segmenter/docs/**/*.*
+    - site-lisp/tiny-segmenter/docs/**/*
+    - site-lisp/tiny-segmenter/scripts/**/*.*
+  exclude:
+    - site-lisp/tiny-segmenter-scratch.l
+    - site-lisp/tiny-segmenter/tests/*.*

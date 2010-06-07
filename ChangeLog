@@ -1,0 +1,21 @@
+2008-07-19  MIYAMUKO Katsuyuki
+
+	* tiny-segmenter 1.1.0 released!
+
+	* (segmenter-segment-all): segmenter の処理をすすめる
+	  (segmenter-segment-partial): ditto
+	  (segmenter-segment-next): ditto
+
+	* (segment): stream, buffer に対応
+
+2008-03-16  MIYAMUKO Katsuyuki
+
+	* (make-segmenter): 呼ばれるたびに解析を進めるクロージャを返す
+	  (segment): make-segmenter を使うようにした。パフォーマンスの劣化は誤差の範囲かな。
+
+2008-03-08  MIYAMUKO Katsuyuki
+
+	* tiny-segmenter 1.0.0 released!
+
+	* tiny-segmenter 作成開始
+
