@@ -1,6 +1,6 @@
-= tiny-segmenter - xyzzy Lisp ‚¾‚¯‚ÅÀ‘•‚³‚ê‚½ƒRƒ“ƒpƒNƒg‚È•ª‚©‚¿‘‚«ƒ\ƒtƒgƒEƒFƒA
+= tiny-segmenter - xyzzy Lisp ã ã‘ã§å®Ÿè£…ã•ã‚ŒãŸã‚³ãƒ³ãƒ‘ã‚¯ãƒˆãªåˆ†ã‹ã¡æ›¸ãã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢
 
-  * Author: ‚İ‚â‚Ş‚± ‚©‚Â‚ä‚« ((<URL:mailto:miyamuko@gmail.com>))
+  * Author: ã¿ã‚„ã‚€ã“ ã‹ã¤ã‚†ã ((<URL:mailto:miyamuko@gmail.com>))
   * Home URL: ((<URL:http://miyamuko.s56.xrea.com/xyzzy/tiny-segmenter/intro.htm>))
   * Version: 1.1.0
 
@@ -9,12 +9,12 @@
 
   (require "tiny-segmenter")
 
-  (ts:segment "„‚Ì–¼‘O‚Í’†–ì‚Å‚·B")
-  ;;=> ("„" "‚Ì" "–¼‘O" "‚Í" "’†–ì" "‚Å‚·" "B")
+  (ts:segment "ç§ã®åå‰ã¯ä¸­é‡ã§ã™ã€‚")
+  ;;=> ("ç§" "ã®" "åå‰" "ã¯" "ä¸­é‡" "ã§ã™" "ã€‚")
 
-  (setf *str* "tiny-segmenter ‚Í
-  uTinySegmenter: Javascript ‚¾‚¯‚ÅÀ‘•‚³‚ê‚½ƒRƒ“ƒpƒNƒg‚È•ª‚©‚¿‘‚«ƒ\ƒtƒgƒEƒFƒAv‚ğ
-  xyzzy lisp ‚ÉˆÚA‚µ‚½‚à‚Ì‚Å‚·B")
+  (setf *str* "tiny-segmenter ã¯
+  ã€ŒTinySegmenter: Javascript ã ã‘ã§å®Ÿè£…ã•ã‚ŒãŸã‚³ãƒ³ãƒ‘ã‚¯ãƒˆãªåˆ†ã‹ã¡æ›¸ãã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã€ã‚’
+  xyzzy lisp ã«ç§»æ¤ã—ãŸã‚‚ã®ã§ã™ã€‚")
 
   (setf *segmenter* (ts:make-segmenter *str*))
 
@@ -25,71 +25,71 @@
   ;;=> "-segmenter"
 
   (ts:segmenter-segment-partial *segmenter* 3)
-  ;;=> (" " "‚Í" "
-  ;;   u")
+  ;;=> (" " "ã¯" "
+  ;;   ã€Œ")
 
   (ts:segmenter-segment-partial *segmenter* 5)
-  ;;=> ("TinySegmenter" ": " "Javascript" " " "‚¾‚¯")
+  ;;=> ("TinySegmenter" ": " "Javascript" " " "ã ã‘")
 
   (ts:segmenter-segment-partial *segmenter* 10)
-  ;;=> ("‚Å" "À‘•" "‚³" "‚ê" "‚½" "ƒRƒ“ƒpƒNƒg" "‚È" "•ª‚©‚¿" "‘‚«" "ƒ\ƒtƒgƒEƒFƒA")
+  ;;=> ("ã§" "å®Ÿè£…" "ã•" "ã‚Œ" "ãŸ" "ã‚³ãƒ³ãƒ‘ã‚¯ãƒˆ" "ãª" "åˆ†ã‹ã¡" "æ›¸ã" "ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢")
 
   (ts:segmenter-segment-all *segmenter*)
-  ;;=> ("v" "‚ğ" "
-  ;;   xyzzy" " lisp" " " "‚É" "ˆÚA‚µ" "‚½" "‚à‚Ì" "‚Å‚·" "B")
+  ;;=> ("ã€" "ã‚’" "
+  ;;   xyzzy" " lisp" " " "ã«" "ç§»æ¤ã—" "ãŸ" "ã‚‚ã®" "ã§ã™" "ã€‚")
 
 
 == DESCRIPTION
 
-tiny-segmenter ‚Í
-((<"TinySegmenter: Javascript ‚¾‚¯‚ÅÀ‘•‚³‚ê‚½ƒRƒ“ƒpƒNƒg‚È•ª‚©‚¿‘‚«ƒ\ƒtƒgƒEƒFƒA"|URL:http://chasen.org/~taku/software/TinySegmenter/>))
-‚ğ xyzzy lisp ‚ÉˆÚA‚µ‚½‚à‚Ì‚Å‚·B
+tiny-segmenter ã¯
+((<"TinySegmenter: Javascript ã ã‘ã§å®Ÿè£…ã•ã‚ŒãŸã‚³ãƒ³ãƒ‘ã‚¯ãƒˆãªåˆ†ã‹ã¡æ›¸ãã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢"|URL:http://chasen.org/~taku/software/TinySegmenter/>))
+ã‚’ xyzzy lisp ã«ç§»æ¤ã—ãŸã‚‚ã®ã§ã™ã€‚
 
-ã‹L URL ‚É‚æ‚ê‚ÎˆÈ‰º‚Ì‚æ‚¤‚È“Á’¥‚ª‚ ‚è‚Ü‚·B
+ä¸Šè¨˜ URL ã«ã‚ˆã‚Œã°ä»¥ä¸‹ã®ã‚ˆã†ãªç‰¹å¾´ãŒã‚ã‚Šã¾ã™ã€‚
 
-  * “ú–{Œê‚ÌV•·‹L–‚Å‚ ‚ê‚Î•¶š’PˆÊ‚Å 95% ’ö“x‚Ì¸“x‚Å•ª‚©‚¿‘‚«‚ªs‚¦‚é
-  * •ª‚©‚¿‘‚«‚Ì’PˆÊ‚Í MeCab + ipadic ‚ÆŒİŠ·
-  * «‘‚ğg‚Á‚Ä‚¢‚Ü‚¹‚ñ (‹@ŠBŠwK‚Ì‚İ)B
-    xyzzy lisp ‚Ì‚İ‚Å•ª‚©‚¿‘‚«‚ğs‚¦‚Ü‚·B
+  * æ—¥æœ¬èªã®æ–°èè¨˜äº‹ã§ã‚ã‚Œã°æ–‡å­—å˜ä½ã§ 95% ç¨‹åº¦ã®ç²¾åº¦ã§åˆ†ã‹ã¡æ›¸ããŒè¡Œãˆã‚‹
+  * åˆ†ã‹ã¡æ›¸ãã®å˜ä½ã¯ MeCab + ipadic ã¨äº’æ›
+  * è¾æ›¸ã‚’ä½¿ã£ã¦ã„ã¾ã›ã‚“ (æ©Ÿæ¢°å­¦ç¿’ã®ã¿)ã€‚
+    xyzzy lisp ã®ã¿ã§åˆ†ã‹ã¡æ›¸ãã‚’è¡Œãˆã¾ã™ã€‚
 
 
 == INSTALL
 
-tiny-segmenter ‚Íƒ‰ƒCƒuƒ‰ƒŠ‚Å‚·B
+tiny-segmenter ã¯ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã§ã™ã€‚
 
-=== NetInstaller ‚ÅƒCƒ“ƒXƒg[ƒ‹
+=== NetInstaller ã§ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
 
 (1) ((<NetInstaller|URL:http://www7a.biglobe.ne.jp/~hat/xyzzy/ni.html>))
-    ‚Å tiny-segmenter ‚ğƒCƒ“ƒXƒg[ƒ‹‚µ‚Ü‚·B
+    ã§ tiny-segmenter ã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ã¾ã™ã€‚
 
-=== NetInstaller ‚ğg‚í‚¸‚ÉƒCƒ“ƒXƒg[ƒ‹
+=== NetInstaller ã‚’ä½¿ã‚ãšã«ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
 
-(1) ƒA[ƒJƒCƒu‚ğƒ_ƒEƒ“ƒ[ƒh‚µ‚Ü‚·B
+(1) ã‚¢ãƒ¼ã‚«ã‚¤ãƒ–ã‚’ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã—ã¾ã™ã€‚
 
     ((<URL:http://miyamuko.s56.xrea.com/xyzzy/archives/tiny-segmenter.zip>))
 
-(2) ƒA[ƒJƒCƒu‚ğ“WŠJ‚µ‚ÄA$XYZZY/site-lisp ”z‰º‚Éƒtƒ@ƒCƒ‹‚ğƒRƒs[‚µ‚Ü‚·B
+(2) ã‚¢ãƒ¼ã‚«ã‚¤ãƒ–ã‚’å±•é–‹ã—ã¦ã€$XYZZY/site-lisp é…ä¸‹ã«ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã‚³ãƒ”ãƒ¼ã—ã¾ã™ã€‚
 
 
 == MODULE
 
 === DEPENDS
 
-ˆË‘¶ƒ‚ƒWƒ…[ƒ‹‚Í‚ ‚è‚Ü‚¹‚ñB
+ä¾å­˜ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
 
 
 === PACKAGE
 
-tiny-segmenter ‚ÍˆÈ‰º‚ÌƒpƒbƒP[ƒW‚ğ—˜—p‚µ‚Ä‚¢‚Ü‚·B
+tiny-segmenter ã¯ä»¥ä¸‹ã®ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã‚’åˆ©ç”¨ã—ã¦ã„ã¾ã™ã€‚
 
   * tiny-segmenter
 
-    nickname ‚Í ts ‚Å‚·B
+    nickname ã¯ ts ã§ã™ã€‚
 
 
 === EXPORT
 
-tiny-segmenter ‚ÍˆÈ‰º‚ÌƒVƒ“ƒ{ƒ‹‚ğ export ‚µ‚Ä‚¢‚Ü‚·B
+tiny-segmenter ã¯ä»¥ä¸‹ã®ã‚·ãƒ³ãƒœãƒ«ã‚’ export ã—ã¦ã„ã¾ã™ã€‚
 
   * tiny-segmenter:segment
   * tiny-segmenter:make-segmenter
@@ -100,70 +100,70 @@ tiny-segmenter ‚ÍˆÈ‰º‚ÌƒVƒ“ƒ{ƒ‹‚ğ export ‚µ‚Ä‚¢‚Ü‚·B
 
 === CONDITION
 
-‚È‚µB
+ãªã—ã€‚
 
 === VARIABLE
 
-‚È‚µB
+ãªã—ã€‚
 
 === COMMAND
 
-‚È‚µB
+ãªã—ã€‚
 
 === FUNCTION
 
 --- tiny-segmenter:segment INPUT
 
-    INPUT ‚Åw’è‚³‚ê‚½ƒIƒuƒWƒFƒNƒg‚ğ•ª‚©‚¿‘‚«‚µ‚ÄƒŠƒXƒg‚Å•Ô‚µ‚Ü‚·B
+    INPUT ã§æŒ‡å®šã•ã‚ŒãŸã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’åˆ†ã‹ã¡æ›¸ãã—ã¦ãƒªã‚¹ãƒˆã§è¿”ã—ã¾ã™ã€‚
 
       ; string
-      (ts:segment "xyzzy ‚Ì“Ç‚İ•û‚ª•ª‚©‚è‚Ü‚¹‚ñB")
-      ;;=> ("xyzzy" " " "‚Ì" "“Ç‚İ•û" "‚ª" "•ª‚©‚è" "‚Ü‚¹" "‚ñ" "B")
+      (ts:segment "xyzzy ã®èª­ã¿æ–¹ãŒåˆ†ã‹ã‚Šã¾ã›ã‚“ã€‚")
+      ;;=> ("xyzzy" " " "ã®" "èª­ã¿æ–¹" "ãŒ" "åˆ†ã‹ã‚Š" "ã¾ã›" "ã‚“" "ã€‚")
 
       ; stream
-      (with-input-from-string (s "xyzzy ‚Ì“Ç‚İ•û‚ª•ª‚©‚è‚Ü‚¹‚ñB")
+      (with-input-from-string (s "xyzzy ã®èª­ã¿æ–¹ãŒåˆ†ã‹ã‚Šã¾ã›ã‚“ã€‚")
         (ts:segment s))
 
       ; buffer
       (ts:segment (find-buffer "*scratch*"))
 
-    * INPUT ‚É‚ÍˆÈ‰º‚ÌƒIƒuƒWƒFƒNƒg‚ğw’è‚Å‚«‚Ü‚·B
-      * •¶š—ñ
-      * ƒXƒgƒŠ[ƒ€
-      * ƒoƒbƒtƒ@
-    * nil ‚Ü‚½‚Í‹ó•¶š—ñ‚ğw’è‚µ‚½ê‡‚Í nil ‚ğ•Ô‚µ‚Ü‚·B
+    * INPUT ã«ã¯ä»¥ä¸‹ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’æŒ‡å®šã§ãã¾ã™ã€‚
+      * æ–‡å­—åˆ—
+      * ã‚¹ãƒˆãƒªãƒ¼ãƒ 
+      * ãƒãƒƒãƒ•ã‚¡
+    * nil ã¾ãŸã¯ç©ºæ–‡å­—åˆ—ã‚’æŒ‡å®šã—ãŸå ´åˆã¯ nil ã‚’è¿”ã—ã¾ã™ã€‚
 
 --- tiny-segmenter:make-segmenter INPUT
 
-    INPUT ‚Åw’è‚³‚ê‚½ƒIƒuƒWƒFƒNƒg‚ğ•ª‚©‚¿‘‚«‚·‚é SEGMENTER ƒIƒuƒWƒFƒNƒg‚ğ•Ô‚µ‚Ü‚·B
+    INPUT ã§æŒ‡å®šã•ã‚ŒãŸã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’åˆ†ã‹ã¡æ›¸ãã™ã‚‹ SEGMENTER ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’è¿”ã—ã¾ã™ã€‚
 
-    SEGMENTER ƒIƒuƒWƒFƒNƒg‚Í INPUT ‚ğ•Û‚µAˆÈ‰º‚ÌŠÖ”‚ªŒÄ‚Î‚ê‚é‚½‚Ñ‚É
-    •ª‚©‚¿‘‚«ˆ—‚ği‚ß‚Ü‚·B
+    SEGMENTER ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã¯ INPUT ã‚’ä¿æŒã—ã€ä»¥ä¸‹ã®é–¢æ•°ãŒå‘¼ã°ã‚Œã‚‹ãŸã³ã«
+    åˆ†ã‹ã¡æ›¸ãå‡¦ç†ã‚’é€²ã‚ã¾ã™ã€‚
 
     * ((<segmenter-segment-next|tiny-segmenter:segmenter-segment-next SEGMENTER>))
     * ((<segmenter-segment-partial|tiny-segmenter:segmenter-segment-partial SEGMENTER N>))
     * ((<segmenter-segment-all|tiny-segmenter:segmenter-segment-all SEGMENTER>))
 
-    ‚·‚×‚Ä‚Ì INPUT ‚ğˆ—‚µ‚½Œã‚ÍA‚±‚ê‚ç‚ÌŠÖ”‚Í nil ‚ğ•Ô‚µ‚Ü‚·B
+    ã™ã¹ã¦ã® INPUT ã‚’å‡¦ç†ã—ãŸå¾Œã¯ã€ã“ã‚Œã‚‰ã®é–¢æ•°ã¯ nil ã‚’è¿”ã—ã¾ã™ã€‚
 
-    * INPUT ‚É‚ÍˆÈ‰º‚ÌƒIƒuƒWƒFƒNƒg‚ğw’è‚Å‚«‚Ü‚·B
-      * •¶š—ñ
-      * ƒXƒgƒŠ[ƒ€
-      * ƒoƒbƒtƒ@
-    * nil ‚Ü‚½‚Í‹ó•¶š—ñ‚ğw’è‚µ‚½ê‡‚Í nil ‚ğ•Ô‚µ‚Ü‚·B
+    * INPUT ã«ã¯ä»¥ä¸‹ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’æŒ‡å®šã§ãã¾ã™ã€‚
+      * æ–‡å­—åˆ—
+      * ã‚¹ãƒˆãƒªãƒ¼ãƒ 
+      * ãƒãƒƒãƒ•ã‚¡
+    * nil ã¾ãŸã¯ç©ºæ–‡å­—åˆ—ã‚’æŒ‡å®šã—ãŸå ´åˆã¯ nil ã‚’è¿”ã—ã¾ã™ã€‚
 
-    ¦’ˆÓ¦
+    â€»æ³¨æ„â€»
 
-    Œ»İ‚Ìƒo[ƒWƒ‡ƒ“‚Å‚Í SEGMENTER ƒIƒuƒWƒFƒNƒg‚ÍƒNƒ[ƒWƒƒ‚Æ‚µ‚ÄÀ‘•‚³‚ê‚Ä‚¢‚Ü‚·‚ªA
-    «—ˆ‚Ìƒo[ƒWƒ‡ƒ“‚Å•ÏX‚·‚é‰Â”\«‚ª‚ ‚è‚Ü‚·B
-    ’¼Ú funcall ‚·‚é‚Ì‚Í”ğ‚¯‚Ä‚­‚¾‚³‚¢B
+    ç¾åœ¨ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã§ã¯ SEGMENTER ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã¯ã‚¯ãƒ­ãƒ¼ã‚¸ãƒ£ã¨ã—ã¦å®Ÿè£…ã•ã‚Œã¦ã„ã¾ã™ãŒã€
+    å°†æ¥ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã§å¤‰æ›´ã™ã‚‹å¯èƒ½æ€§ãŒã‚ã‚Šã¾ã™ã€‚
+    ç›´æ¥ funcall ã™ã‚‹ã®ã¯é¿ã‘ã¦ãã ã•ã„ã€‚
 
 --- tiny-segmenter:segmenter-segment-next SEGMENTER
 
-    SEGMENTER ƒIƒuƒWƒFƒNƒg‚ª•Û‚·‚éc‚è‚Ì INPUT ‚ğ•ª‚©‚¿‘‚«‚µ‚Ä
-    Ÿ‚Ì’PŒê‚ğæ“¾‚µ‚Ü‚·B
+    SEGMENTER ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒä¿æŒã™ã‚‹æ®‹ã‚Šã® INPUT ã‚’åˆ†ã‹ã¡æ›¸ãã—ã¦
+    æ¬¡ã®å˜èªã‚’å–å¾—ã—ã¾ã™ã€‚
 
-      (setf *segmenter* (ts:make-segmenter "xyzzy ‚Ì“Ç‚İ•û‚ª•ª‚©‚è‚Ü‚¹‚ñB"))
+      (setf *segmenter* (ts:make-segmenter "xyzzy ã®èª­ã¿æ–¹ãŒåˆ†ã‹ã‚Šã¾ã›ã‚“ã€‚"))
 
       (ts:segmenter-segment-next *segmenter*)
       ;;=> "xyzzy"
@@ -172,82 +172,82 @@ tiny-segmenter ‚ÍˆÈ‰º‚ÌƒVƒ“ƒ{ƒ‹‚ğ export ‚µ‚Ä‚¢‚Ü‚·B
       ;;=> " "
 
       (ts:segmenter-segment-next *segmenter*)
-      ;;=> "‚Ì"
+      ;;=> "ã®"
 
 --- tiny-segmenter:segmenter-segment-partial SEGMENTER N
 
-    SEGMENTER ƒIƒuƒWƒFƒNƒg‚ª•Û‚·‚éc‚è‚Ì INPUT ‚ğ•ª‚©‚¿‘‚«‚µ‚Ä
-    N ŒÂ‚Ì’PŒê‚ÌƒŠƒXƒg‚ğæ“¾‚µ‚Ü‚·B
+    SEGMENTER ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒä¿æŒã™ã‚‹æ®‹ã‚Šã® INPUT ã‚’åˆ†ã‹ã¡æ›¸ãã—ã¦
+    N å€‹ã®å˜èªã®ãƒªã‚¹ãƒˆã‚’å–å¾—ã—ã¾ã™ã€‚
 
-      (setf *segmenter* (ts:make-segmenter "xyzzy ‚Ì“Ç‚İ•û‚ª•ª‚©‚è‚Ü‚¹‚ñB"))
+      (setf *segmenter* (ts:make-segmenter "xyzzy ã®èª­ã¿æ–¹ãŒåˆ†ã‹ã‚Šã¾ã›ã‚“ã€‚"))
       
       (ts:segmenter-segment-partial *segmenter* 7)
-      ;;=> ("xyzzy" " " "‚Ì" "“Ç‚İ•û" "‚ª" "•ª‚©‚è" "‚Ü‚¹")
+      ;;=> ("xyzzy" " " "ã®" "èª­ã¿æ–¹" "ãŒ" "åˆ†ã‹ã‚Š" "ã¾ã›")
       
       (ts:segmenter-segment-partial *segmenter* 7)
-      ;;=> ("‚ñ" "B")
+      ;;=> ("ã‚“" "ã€‚")
       
       (ts:segmenter-segment-partial *segmenter* 7)
       ;;=> nil
 
 --- tiny-segmenter:segmenter-segment-all SEGMENTER
 
-    SEGMENTER ƒIƒuƒWƒFƒNƒg‚ª•Û‚·‚éc‚è‚Ì INPUT ‚·‚×‚Ä•ª‚©‚¿‘‚«‚µ‚Ä
-    ’PŒê‚ÌƒŠƒXƒg‚ğæ“¾‚µ‚Ü‚·B
+    SEGMENTER ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒä¿æŒã™ã‚‹æ®‹ã‚Šã® INPUT ã™ã¹ã¦åˆ†ã‹ã¡æ›¸ãã—ã¦
+    å˜èªã®ãƒªã‚¹ãƒˆã‚’å–å¾—ã—ã¾ã™ã€‚
 
-      (setf *segmenter* (ts:make-segmenter "xyzzy ‚Ì“Ç‚İ•û‚ª•ª‚©‚è‚Ü‚¹‚ñB"))
+      (setf *segmenter* (ts:make-segmenter "xyzzy ã®èª­ã¿æ–¹ãŒåˆ†ã‹ã‚Šã¾ã›ã‚“ã€‚"))
 
       (ts:segmenter-segment-next *segmenter*)
       ;;=> "xyzzy"
 
       (ts:segmenter-segment-all *segmenter*)
-      ;;=> (" " "‚Ì" "“Ç‚İ•û" "‚ª" "•ª‚©‚è" "‚Ü‚¹" "‚ñ" "B")
+      ;;=> (" " "ã®" "èª­ã¿æ–¹" "ãŒ" "åˆ†ã‹ã‚Š" "ã¾ã›" "ã‚“" "ã€‚")
 
 --- tiny-segmenter:tiny-segmenter-version
 
-    –{ƒ‰ƒCƒuƒ‰ƒŠ‚Ìƒo[ƒWƒ‡ƒ“‚ğ•Ô‚µ‚Ü‚·B
-    ƒo[ƒWƒ‡ƒ“‚Í major.minor.teeny ‚Æ‚¢‚¤Œ`®‚Å‚·B
+    æœ¬ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚’è¿”ã—ã¾ã™ã€‚
+    ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã¯ major.minor.teeny ã¨ã„ã†å½¢å¼ã§ã™ã€‚
 
-    ‚»‚ê‚¼‚ê‚Ì”Ô†‚Í•K‚¸ 1 Œ…‚É‚·‚é‚Ì‚ÅAˆÈ‰º‚Ì‚æ‚¤‚É”äŠr‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·
+    ãã‚Œãã‚Œã®ç•ªå·ã¯å¿…ãš 1 æ¡ã«ã™ã‚‹ã®ã§ã€ä»¥ä¸‹ã®ã‚ˆã†ã«æ¯”è¼ƒã™ã‚‹ã“ã¨ãŒã§ãã¾ã™
 
         (if (string<= "1.1.0" (tiny-segmenter:tiny-segmenter-version))
-            '(1.1.0 ˆÈ~‚Å—LŒø‚Èˆ—)
-          '(1.1.0 ‚æ‚è‘O‚Ìƒo[ƒWƒ‡ƒ“‚Å‚Ìˆ—))
+            '(1.1.0 ä»¥é™ã§æœ‰åŠ¹ãªå‡¦ç†)
+          '(1.1.0 ã‚ˆã‚Šå‰ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã§ã®å‡¦ç†))
 
 
 == TODO
 
 * make-segmenter
-  * Å‰‚Ì‰Šú‰»ˆ—‚ğ’x‰„
-  * stream ‚©‚ç“Ç‚İ‚İ‚È‚ª‚ç•ª‚©‚¿‘‚«‚ği‚ß‚é
+  * æœ€åˆã®åˆæœŸåŒ–å‡¦ç†ã‚’é…å»¶
+  * stream ã‹ã‚‰èª­ã¿è¾¼ã¿ãªãŒã‚‰åˆ†ã‹ã¡æ›¸ãã‚’é€²ã‚ã‚‹
 
 
 == KNOWN BUGS
 
-‚È‚µB
+ãªã—ã€‚
 
 
 == SEE ALSO
 
-  : TinySegmenter: Javascript ‚¾‚¯‚ÅÀ‘•‚³‚ê‚½ƒRƒ“ƒpƒNƒg‚È•ª‚©‚¿‘‚«ƒ\ƒtƒgƒEƒFƒA
+  : TinySegmenter: Javascript ã ã‘ã§å®Ÿè£…ã•ã‚ŒãŸã‚³ãƒ³ãƒ‘ã‚¯ãƒˆãªåˆ†ã‹ã¡æ›¸ãã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢
       ((<URL:http://chasen.org/~taku/software/TinySegmenter/>))
 
   : Text::TinySegmenter - Super compact Japanese tokenizer - search.cpan.org
       ((<URL:http://search.cpan.org/dist/Text-TinySegmenter/>))
 
-  : TinySegmenter‚ğRuby‚ÉˆÚA‚µ‚Ä‚İ‚½[Ruby] - d.hatena.zeg.la
+  : TinySegmenterã‚’Rubyã«ç§»æ¤ã—ã¦ã¿ãŸ[Ruby] - d.hatena.zeg.la
       ((<URL:http://d.hatena.ne.jp/zegenvs/20080212/p1>))
 
-  : TinySegmenter‚ğRuby‚ÉˆÚA - llamerada‚Ì“ú‹L
+  : TinySegmenterã‚’Rubyã«ç§»æ¤ - llameradaã®æ—¥è¨˜
       ((<URL:http://d.hatena.ne.jp/llamerada/20080224/1203818061>))
 
 
 == COPYRIGHT
 
-tiny-segmenter ‚ÍH“¡‘ñ‚É‚æ‚Á‚ÄŠJ”­‚³‚ê‚½ JavaScript ”Å‚Ì TinySegmenter ‚ğ
-xyzzy lisp ‚ÉˆÚA‚µ‚½‚à‚Ì‚Å‚·B
+tiny-segmenter ã¯å·¥è—¤æ‹“æ°ã«ã‚ˆã£ã¦é–‹ç™ºã•ã‚ŒãŸ JavaScript ç‰ˆã® TinySegmenter ã‚’
+xyzzy lisp ã«ç§»æ¤ã—ãŸã‚‚ã®ã§ã™ã€‚
 
-tiny-segmenter ‚ÍC³ BSD ƒ‰ƒCƒZƒ“ƒX‚É]‚Á‚Ä–{ƒ\ƒtƒgƒEƒFƒA‚ğg—pAÄ”z•z‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+tiny-segmenter ã¯ä¿®æ­£ BSD ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã«å¾“ã£ã¦æœ¬ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã‚’ä½¿ç”¨ã€å†é…å¸ƒã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
 
   tiny-segmenter -- Super compact Japanese tokenizer
   

@@ -2,20 +2,20 @@
 
 	* tiny-segmenter 1.1.0 released!
 
-	* (segmenter-segment-all): segmenter ‚Ìˆ—‚ğ‚·‚·‚ß‚é
+	* (segmenter-segment-all): segmenter ã®å‡¦ç†ã‚’ã™ã™ã‚ã‚‹
 	  (segmenter-segment-partial): ditto
 	  (segmenter-segment-next): ditto
 
-	* (segment): stream, buffer ‚É‘Î‰
+	* (segment): stream, buffer ã«å¯¾å¿œ
 
 2008-03-16  MIYAMUKO Katsuyuki
 
-	* (make-segmenter): ŒÄ‚Î‚ê‚é‚½‚Ñ‚É‰ğÍ‚ği‚ß‚éƒNƒ[ƒWƒƒ‚ğ•Ô‚·
-	  (segment): make-segmenter ‚ğg‚¤‚æ‚¤‚É‚µ‚½BƒpƒtƒH[ƒ}ƒ“ƒX‚Ì—ò‰»‚ÍŒë·‚Ì”ÍˆÍ‚©‚ÈB
+	* (make-segmenter): å‘¼ã°ã‚Œã‚‹ãŸã³ã«è§£æã‚’é€²ã‚ã‚‹ã‚¯ãƒ­ãƒ¼ã‚¸ãƒ£ã‚’è¿”ã™
+	  (segment): make-segmenter ã‚’ä½¿ã†ã‚ˆã†ã«ã—ãŸã€‚ãƒ‘ãƒ•ã‚©ãƒ¼ãƒãƒ³ã‚¹ã®åŠ£åŒ–ã¯èª¤å·®ã®ç¯„å›²ã‹ãªã€‚
 
 2008-03-08  MIYAMUKO Katsuyuki
 
 	* tiny-segmenter 1.0.0 released!
 
-	* tiny-segmenter ì¬ŠJn
+	* tiny-segmenter ä½œæˆé–‹å§‹
 

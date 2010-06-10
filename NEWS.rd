@@ -2,31 +2,31 @@
 
 === 2008-07-19 / 1.1.0
 
-tiny-segmenter 1.1.0 ƒŠƒŠ[ƒX!
+tiny-segmenter 1.1.0 ãƒªãƒªãƒ¼ã‚¹!
 
-: V‹K‹@”\
+: æ–°è¦æ©Ÿèƒ½
 
-    * (make-segmenter): •ª‚©‚¿‘‚«ˆ—‚ğs‚¤ƒIƒuƒWƒFƒNƒg‚ğì¬‚·‚é
-    * (segmenter-segment-all): segmenter ‚Ìˆ—‚ğ‚·‚·‚ß‚é
+    * (make-segmenter): åˆ†ã‹ã¡æ›¸ãå‡¦ç†ã‚’è¡Œã†ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆã™ã‚‹
+    * (segmenter-segment-all): segmenter ã®å‡¦ç†ã‚’ã™ã™ã‚ã‚‹
     * (segmenter-segment-partial): ditto
     * (segmenter-segment-next): ditto
-    * (segment): buffer, stream ‚É‘Î‰
+    * (segment): buffer, stream ã«å¯¾å¿œ
 
-: ”ñŒİŠ·‚ğŠÜ‚Ş•ÏX“_
+: éäº’æ›ã‚’å«ã‚€å¤‰æ›´ç‚¹
 
-    * ‚È‚µ
+    * ãªã—
 
-: ƒoƒOC³
+: ãƒã‚°ä¿®æ­£
 
-    * ‚È‚µ
+    * ãªã—
 
-: ‚»‚Ì‘¼
+: ãã®ä»–
 
-    * ‚È‚µ
+    * ãªã—
 
 
 === 2008-03-09 / 1.0.0
 
-tiny-segmenter 1.0.0 ƒŠƒŠ[ƒX!
+tiny-segmenter 1.0.0 ãƒªãƒªãƒ¼ã‚¹!
 
 =end
