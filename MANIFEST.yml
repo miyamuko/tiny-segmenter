@@ -21,5 +21,4 @@ files:
     - site-lisp/tiny-segmenter/docs/**/*
     - site-lisp/tiny-segmenter/scripts/**/*.*
   exclude:
-    - site-lisp/tiny-segmenter-scratch.l
     - site-lisp/tiny-segmenter/tests/*.*
