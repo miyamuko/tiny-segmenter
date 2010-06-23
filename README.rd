@@ -96,6 +96,10 @@ tiny-segmenter は以下のシンボルを export しています。
   * tiny-segmenter:segmenter-segment-all
   * tiny-segmenter:segmenter-segment-partial
   * tiny-segmenter:segmenter-segment-next
+  * tiny-segmenter:segmenter-before
+  * tiny-segmenter:segmenter-after
+  * tiny-segmenter:preceding-segment
+  * tiny-segmenter:following-segment
 
 
 === CONDITION
@@ -203,6 +207,44 @@ tiny-segmenter は以下のシンボルを export しています。
       (ts:segmenter-segment-all *segmenter*)
       ;;=> (" " "の" "読み方" "が" "分かり" "ませ" "ん" "。")
 
+--- tiny-segmenter:segment-before &OPTIONAL POINT &KEY BUFFER
+
+    指定されたバッファのポイントの前を分かち書きして単語と開始と終了ポイントを多値で返します。
+
+      (let ((buffer (get-buffer-create "*test*")))
+        (set-buffer buffer)
+        (erase-buffer buffer)
+        (insert "今日の料理")
+        (multiple-value-list (segment-before 2))                  ;=> ("今日" 0 2)
+        (multiple-value-list (segment-after 2))                   ;=> ("の" 2 3)
+        (multiple-value-list (segment-after 3))                   ;=> ("料理" 3 5)
+        (set-buffer "*scratch*")
+        (multiple-value-list (segment-before 5 :buffer "*test*")) ;=> ("料理" 3 5)
+        )
+
+--- tiny-segmenter:segment-after &OPTIONAL POINT &KEY BUFFER
+
+    指定されたバッファのポイントの後を分かち書きして単語と開始と終了ポイントを多値で返します。
+
+--- tiny-segmenter:preceding-segment
+
+    現在のカーソル位置の前を分かち書きして単語と開始と終了ポイントを多値で返します。
+
+      (let ((buffer (get-buffer-create "*test*")))
+        (set-buffer buffer)
+        (erase-buffer buffer)
+        (insert "今日の料理")
+        (goto-char 2)
+        (multiple-value-list (preceding-segment)) ;=> ("今日" 0 2)
+        (multiple-value-list (following-segment)) ;=> ("の" 2 3)
+        (goto-char 3)
+        (multiple-value-list (following-segment)) ;=> ("料理" 3 5)
+        )
+
+--- tiny-segmenter:following-segment
+
+    現在のカーソル位置の後を分かち書きして単語と開始と終了ポイントを多値で返します。
+
 --- tiny-segmenter:tiny-segmenter-version
 
     本ライブラリのバージョンを返します。
@@ -252,7 +294,7 @@ tiny-segmenter は修正 BSD ライセンスに従って本ソフトウェアを
   tiny-segmenter -- Super compact Japanese tokenizer
   
   (c) 2008 Taku Kudo <taku@chasen.org>
-  (c) 2008 MIYAMUKO Katsuyuki  <miyamuko@gmail.com>
+  (c) 2008,2010 MIYAMUKO Katsuyuki  <miyamuko@gmail.com>
   
   tiny-segmenter is freely distributable under the terms of a new BSD licence.
   For details, see http://chasen.org/~taku/software/TinySegmenter/LICENCE.txt

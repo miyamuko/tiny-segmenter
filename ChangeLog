@@ -1,3 +1,10 @@
+2010-06-23  MIYAMUKO Katsuyuki
+
+	* (segment-before): 指定されたポイントの前を分かち書きして返す
+	  (segment-after): 指定されたポイントの後を分かち書きして返す
+	  (following-segment): 現在のカーソル位置の後を分かち書きして返す
+	  (preceding-segment): 現在のカーソル位置の前を分かち書きして返す
+
 2008-07-19  MIYAMUKO Katsuyuki
 
 	* tiny-segmenter 1.1.0 released!
